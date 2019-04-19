@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6015F64-1C62-4759-B37A-3A76716B08C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CfgTool</RootNamespace>
+    <AssemblyName>配置工具</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Visual Studio 2012\Visual C#\PMC\PMC\bin\Debug\LBIndustrialCtrls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutDlg.Designer.cs">
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGYX.cs" />
+    <Compile Include="Comm_Device.cs" />
+    <Compile Include="Comm_FWT.cs" />
+    <Compile Include="Comm_Model.cs" />
+    <Compile Include="Comm_Port.cs" />
+    <Compile Include="Form_Add_DeviceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add_DeviceTable.Designer.cs">
+      <DependentUpon>Form_Add_DeviceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AutoCfgSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AutoCfgSet.Designer.cs">
+      <DependentUpon>Form_AutoCfgSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CfgTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CfgTool.Designer.cs">
+      <DependentUpon>Form_CfgTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Add_Device.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add_Device.Designer.cs">
+      <DependentUpon>Form_Add_Device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Add_FWT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add_FWT.Designer.cs">
+      <DependentUpon>Form_Add_FWT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Info.Designer.cs">
+      <DependentUpon>Form_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProtocolPara_Up101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProtocolPara_Up101.Designer.cs">
+      <DependentUpon>Form_ProtocolPara_Up101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProtocolPara_Up104.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProtocolPara_Up104.Designer.cs">
+      <DependentUpon>Form_ProtocolPara_Up104.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Setup.Designer.cs">
+      <DependentUpon>Form_Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Device.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Device.Designer.cs">
+      <DependentUpon>Form_Table_Device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_DeviceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_DeviceTable.Designer.cs">
+      <DependentUpon>Form_Table_DeviceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Device_Name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Device_Name.Designer.cs">
+      <DependentUpon>Form_Table_Device_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_FWT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_FWT.Designer.cs">
+      <DependentUpon>Form_Table_FWT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_FWT_CopyFlagSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_FWT_CopyFlagSet.Designer.cs">
+      <DependentUpon>Form_Table_FWT_CopyFlagSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_FWT_FastDrag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_FWT_FastDrag.Designer.cs">
+      <DependentUpon>Form_Table_FWT_FastDrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_FWT_Name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_FWT_Name.Designer.cs">
+      <DependentUpon>Form_Table_FWT_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_FWT_SNString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_FWT_SNString.Designer.cs">
+      <DependentUpon>Form_Table_FWT_SNString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Para.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Para.Designer.cs">
+      <DependentUpon>Form_Table_Para.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Port.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Port.Designer.cs">
+      <DependentUpon>Form_Table_Port.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Port_Name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Port_Name.Designer.cs">
+      <DependentUpon>Form_Table_Port_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_RTDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_RTDB.Designer.cs">
+      <DependentUpon>Form_Table_RTDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Model.Designer.cs">
+      <DependentUpon>Form_Table_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Model_Name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Model_Name.Designer.cs">
+      <DependentUpon>Form_Table_Model_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Table_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Table_Setting.Designer.cs">
+      <DependentUpon>Form_Table_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_YCSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_YCSet.Designer.cs">
+      <DependentUpon>Form_YCSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpWeb.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="iniRW.cs" />
+    <Compile Include="ParaConfig.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelnetInterface.cs" />
+    <EmbeddedResource Include="AboutDlg.resx">
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Add_DeviceTable.resx">
+      <DependentUpon>Form_Add_DeviceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Add_FWT.resx">
+      <DependentUpon>Form_Add_FWT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AutoCfgSet.resx">
+      <DependentUpon>Form_AutoCfgSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CfgTool.resx">
+      <DependentUpon>Form_CfgTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Add_Device.resx">
+      <DependentUpon>Form_Add_Device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Info.resx">
+      <DependentUpon>Form_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProtocolPara_Up101.resx">
+      <DependentUpon>Form_ProtocolPara_Up101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProtocolPara_Up104.resx">
+      <DependentUpon>Form_ProtocolPara_Up104.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Setup.resx">
+      <DependentUpon>Form_Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Device.resx">
+      <DependentUpon>Form_Table_Device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_DeviceTable.resx">
+      <DependentUpon>Form_Table_DeviceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Device_Name.resx">
+      <DependentUpon>Form_Table_Device_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_FWT.resx">
+      <DependentUpon>Form_Table_FWT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_FWT_CopyFlagSet.resx">
+      <DependentUpon>Form_Table_FWT_CopyFlagSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_FWT_FastDrag.resx">
+      <DependentUpon>Form_Table_FWT_FastDrag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_FWT_Name.resx">
+      <DependentUpon>Form_Table_FWT_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_FWT_SNString.resx">
+      <DependentUpon>Form_Table_FWT_SNString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Para.resx">
+      <DependentUpon>Form_Table_Para.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Port.resx">
+      <DependentUpon>Form_Table_Port.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Port_Name.resx">
+      <DependentUpon>Form_Table_Port_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_RTDB.resx">
+      <DependentUpon>Form_Table_RTDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Model.resx">
+      <DependentUpon>Form_Table_Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Model_Name.resx">
+      <DependentUpon>Form_Table_Model_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Table_Setting.resx">
+      <DependentUpon>Form_Table_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_YCSet.resx">
+      <DependentUpon>Form_YCSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.ico" />
+    <None Include="Resources\auto.png" />
+    <None Include="Resources\tip.png" />
+    <None Include="Resources\showtv.png" />
+    <None Include="Resources\hidetv.png" />
+    <None Include="Resources\showtv48.png" />
+    <None Include="Resources\hidetv48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
